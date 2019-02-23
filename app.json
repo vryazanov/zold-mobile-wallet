@@ -4,6 +4,7 @@
     "slug": "zold-mobile-wallet",
     "privacy": "public",
     "sdkVersion": "32.0.0",
+    "entryPoint": "./src/index.js",
     "platforms": [
       "ios",
       "android"
