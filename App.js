@@ -3,6 +3,10 @@ import { StyleSheet, Text, TextInput, View, Image } from 'react-native'
 import PhoneInput from 'react-native-phone-input'
 
 
+/*
+@todo: Test pdd hooks
+*/
+
 export default class App extends React.Component {
   render() {
     return (
