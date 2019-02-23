@@ -1,10 +1,10 @@
 ## Introduction
-It's mobile an implementation of Zold Wallet for both `IOS` and `Android` platforms using `react-native` framework.
+It's a mobile implementation of Zold Wallet for both `IOS` and `Android` platforms using `react-native` framework.
 
 
 ## How to run locally
 It's pretty easy to start application on real device using `expo`. Do the following steps:
-1. Clone the repo and execute `npm inside` inside
+1. Clone the repo and execute `npm install` inside
 2. Download `Expo` application from `Play Market` / `Apple Store`.
 3. Open application and sign up.
 4. Inside the repo execute `npm run start`. Browse page with the following URL will be opened: `http://localhost:19002/`
