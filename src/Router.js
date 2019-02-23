@@ -5,15 +5,23 @@
 */
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 import Home from './Home'
-import SignIn from './SignIn'
+
+import PhoneSignIn from './components/PhoneSignIn'
+import SMSConfirm from './components/SMSConfirm'
 
 
 const AppNavigator = createStackNavigator({
     Home: {
       screen: Home,
     },
-    Signin: {
-      screen: SignIn,
+    PhoneSignIn: {
+      screen: PhoneSignIn,
+      navigationOptions: {
+        header: null,
+      }
+    },
+    SMSConfirm: {
+      screen: SMSConfirm,
       navigationOptions: {
         header: null,
       }

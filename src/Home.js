@@ -1,7 +1,7 @@
 
 
 const Home = ({ navigation }) => {
-    navigation.navigate('Signin')
+    navigation.navigate('PhoneSignIn')
     return null
 }
 
