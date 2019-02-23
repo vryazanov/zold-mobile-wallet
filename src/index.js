@@ -1,5 +1,5 @@
 import { registerRootComponent } from 'expo'
 
-import App from './App'
+import Router from './Router'
 
-export default Expo.registerRootComponent(App);
+export default registerRootComponent(Router);
