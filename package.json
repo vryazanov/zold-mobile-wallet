@@ -13,7 +13,7 @@
     "react-native-confirmation-code-input": "^1.0.4",
     "react-native-phone-input": "^0.2.1",
     "react-navigation": "^3.3.0",
-    "zold-node-sdk": "0.0.3"
+    "zold-node-sdk": "0.0.4"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
