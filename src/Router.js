@@ -7,7 +7,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation'
 import Home from './Home'
 
 import PhoneSignIn from './components/PhoneSignIn'
-import SMSConfirm from './components/SMSConfirm'
+import SMSConfirm from './containers/SMSConfirm'
 
 
 const AppNavigator = createStackNavigator({
