@@ -2,9 +2,6 @@ import React, { PureComponent } from 'react'
 import { StyleSheet, Text, Button, View, Image } from 'react-native'
 import PhoneInput from 'react-native-phone-input'
 
-import mainStyles from '../styles'
-import Logo from '../ui/Logo'
-
 
 export default class SignIn extends PureComponent {
     state = {
@@ -24,8 +21,7 @@ export default class SignIn extends PureComponent {
     render() {
         const { showGetCodeButton } = this.state
         return (
-            <View style={mainStyles.container}>
-                <Logo />
+            <View style={styles.container}>
                 <View style={styles.labelContainer}>
                     <Text>Enter your phone number:</Text>
                 </View>
@@ -37,7 +33,7 @@ export default class SignIn extends PureComponent {
                         onChangePhoneNumber={this.onPhoneChanged}
                     />
                 </View>
-                {showGetCodeButton && 
+                {showGetCodeButton &&
                     <View style={styles.buttonContainer}>
                         <Button title="Get code" onPress={this.onGetCodePressed} />
                     </View>}
@@ -47,6 +43,10 @@ export default class SignIn extends PureComponent {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center'
+  },
   inputContainer: {
     width: 150,
     marginTop: 25,

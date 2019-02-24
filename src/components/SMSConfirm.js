@@ -5,8 +5,6 @@ import CodeInput from 'react-native-confirmation-code-input'
 import MobileToken from 'zold-node-sdk/lib/MobileToken'
 
 import Spinner from './Spinner'
-import mainStyles from '../styles'
-import Logo from '../ui/Logo'
 
 
 export default class SMSConfirm extends PureComponent {
@@ -31,6 +29,7 @@ export default class SMSConfirm extends PureComponent {
         this.mobileToken.token(code)
             .then(token => {
                 this.props.setToken(token)
+                this.props.navigation.navigate('Home')
             })
             .catch(() => {
                 this.codeInput.clear()
@@ -43,8 +42,7 @@ export default class SMSConfirm extends PureComponent {
             return <Spinner />
         }
         return (
-            <View style={mainStyles.container}>
-                <Logo />
+            <View style={styles.container}>
                 <Text>Enter code:</Text>
                 <CodeInput
                     ref={node => {
@@ -65,3 +63,10 @@ export default class SMSConfirm extends PureComponent {
         )
     }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center'
+  }
+})
