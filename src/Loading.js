@@ -1,8 +1,8 @@
 
 
-const Home = ({ navigation }) => {
+const Loading = ({ navigation }) => {
     navigation.navigate('PhoneSignIn')
     return null
 }
 
-export default Home
+export default Loading
