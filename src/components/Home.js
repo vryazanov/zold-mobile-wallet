@@ -6,9 +6,9 @@ export default class Home extends PureComponent {
   render() {
     return (
       <View style={styles.header}>
-          <Button title="Transactions" />
-          <Button title="Pay" />
-          <Button title="Buy / Sell" />
+        <Button title="Transactions" />
+        <Button title="Pay" />
+        <Button title="Buy / Sell" />
       </View>
     )
   }

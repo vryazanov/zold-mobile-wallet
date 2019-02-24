@@ -8,9 +8,9 @@ import styles from '../styles'
 export default class Header extends PureComponent {
   render() {
     return (
-        <View style={styles.header}>
-            <Logo />
-        </View>
+      <View style={styles.header}>
+        <Logo />
+      </View>
     )
   }
 }
