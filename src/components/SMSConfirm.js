@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import { View, Text, StyleSheet } from 'react-native'
 import CodeInput from 'react-native-confirmation-code-input'
 import MobileToken from 'zold-node-sdk/lib/MobileToken'
@@ -9,6 +10,11 @@ import Logo from '../ui/Logo'
 
 
 export default class SMSConfirm extends PureComponent {
+    static propTypes = {
+        setToken: PropTypes.func.isRequired,
+        navigation: PropTypes.shape({}),
+    }
+
     state = {
         showSpinner: true,
     }
@@ -24,7 +30,7 @@ export default class SMSConfirm extends PureComponent {
     onFullFilled = (code) => {
         this.mobileToken.token(code)
             .then(token => {
-                console.log('Token: ', token)
+                this.props.setToken(token)
             })
             .catch(() => {
                 this.codeInput.clear()
