@@ -15,7 +15,9 @@
     "react-navigation": "^3.3.0",
     "react-redux": "^6.0.1",
     "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
     "zold-node-sdk": "^1.0.0"
   },
   "devDependencies": {

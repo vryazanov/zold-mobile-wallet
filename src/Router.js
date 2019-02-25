@@ -1,6 +1,6 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 
-import Loading from './Loading'
+import Loading from './containers/Loading'
 import Home from './components/Home'
 import PhoneSignIn from './components/PhoneSignIn'
 import SMSConfirm from './containers/SMSConfirm'
