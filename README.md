@@ -7,10 +7,8 @@ Feel free to contribute.
 ## How to run application on device for testing
 1. Download `Expo Client` from `App Store` / `Play Market` (`App Store`: https://itunes.apple.com/us/app/expo-client/id982107779
 2. Open Expo Client and sign up, it takes two minutes. No email verification required.
-  <img width="260" src="./docs/images/Expo-Main.jpg" />
-  <img width="260" src="./docs/images/Expo-SignUp.jpg" />
 3. Open `exp://exp.host/@vryazanov/zold-mobile-wallet` from your mobile browser or scan QR code from https://expo.io/@vryazanov/zold-mobile-wallet
-4. Application will be opened in Expo and will be available there on your device: <img width="360" src="./docs/images/Expo-Projects.jpg" />
+4. Application will be opened in Expo and will be available there on your device.
 
 
 All application updates will be synced automatically.
