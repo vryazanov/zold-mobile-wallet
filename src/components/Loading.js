@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 
 const Loading = ({ navigation, authToken }) => {
-    if (authToken) {
-      navigation.navigate('Home')
-    } else {
-      navigation.navigate('PhoneSignIn')
-    }
-    return null
+  if (authToken) {
+    navigation.navigate('Home')
+  } else {
+    navigation.navigate('PhoneSignIn')
+  }
+  return null
 }
 
 Loading.propTypes = {
