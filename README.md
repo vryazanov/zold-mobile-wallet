@@ -5,7 +5,7 @@ It uses [zold-node-sdk](https://github.com/vryazanov/zold-node-sdk) under the ho
 Feel free to contribute.
 
 ## How to run application on device for testing
-1. Download `Expo Client` from `App Store` / `Play Market` (`App Store`: https://itunes.apple.com/us/app/expo-client/id982107779
+1. Download `Expo Client` from [App Store](https://itunes.apple.com/us/app/expo-client/id982107779) / [Play Market](https://play.google.com/store/apps/details?id=host.exp.exponent). 
 2. Open `Expo Client` and sign up, it takes two minutes. No email verification required.
 3. Open `exp://exp.host/@vryazanov/zold-mobile-wallet` from your mobile browser or scan QR code from https://expo.io/@vryazanov/zold-mobile-wallet
 4. Application will be opened in Expo and will be available there on your device.
