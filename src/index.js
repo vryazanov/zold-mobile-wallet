@@ -21,7 +21,6 @@ const _persistReducer = persistReducer(persistConfig, reducer)
 const store = createStore(_persistReducer, applyMiddleware(thunkMiddleware))
 const persistor = persistStore(store)
 
-
 class App extends Component {
   render() {
     return (
