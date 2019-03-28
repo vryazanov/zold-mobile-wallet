@@ -4,7 +4,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "flow": "flow"
   },
   "dependencies": {
     "expo": "^32.0.0",
@@ -21,7 +22,9 @@
     "zold-node-sdk": "^1.0.0"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.0.0"
+    "@babel/preset-flow": "^7.0.0",
+    "babel-preset-expo": "^5.0.0",
+    "flow-bin": "^0.95.1"
   },
   "private": true
 }
