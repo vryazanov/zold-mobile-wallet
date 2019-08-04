@@ -1,17 +1,27 @@
-import PropTypes from 'prop-types'
+import React, { PureComponent } from 'react'
+import Wallet from 'zold-node-sdk/lib/Wallet'
 
-const Loading = ({ navigation, authToken }) => {
-  if (authToken) {
-    navigation.navigate('Home')
-  } else {
-    navigation.navigate('PhoneSignIn')
+import Spinner from './Spinner'
+
+
+class Loading extends PureComponent {
+  componentDidMount() {
+    const { navigation, authToken } = this.props
+
+    if (authToken) {
+      const wallet = new Wallet(authToken)
+      console.log('Start pulling')
+      wallet.pull()
+        .then(jobId => wallet.job(jobId, { wait: true }))
+        .then(() => navigation.navigate('Home', { wallet }))
+    } else {
+      navigation.navigate('PhoneSignIn')
+    }
   }
-  return null
-}
 
-Loading.propTypes = {
-  navigation: PropTypes.func.isRequired,
-  authToken: PropTypes.string,
+  render() {
+    return <Spinner />
+  }
 }
 
 export default Loading

@@ -28,9 +28,10 @@ export default class SMSConfirm extends PureComponent {
     onFullFilled = (code) => {
       this.mobileToken.token(code)
         .then(token => {
-          this.props.setToken(token)
-          this.props.navigation.navigate('Home')
+          console.log('Token: ', token)
+          return this.props.setToken(token)
         })
+        .then(() => this.props.navigation.navigate('Loading'))
         .catch(() => {
           this.codeInput.clear()
         })

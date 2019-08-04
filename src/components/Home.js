@@ -1,15 +1,13 @@
 import React, { PureComponent } from 'react'
 import { StyleSheet, Button, View } from 'react-native'
 
-import Balance from './Balance'
+import Balance from '../containers/Balance'
 
 export default class Home extends PureComponent {
   constructor(props) {
     super(props)
-
-    this.menuComponents = {
-      'balance': Balance,
-    }
+    this.menuComponents = { balance: Balance }
+    this.wallet = this.props.navigation.getParam('wallet')
   }
 
   state = {
@@ -21,11 +19,14 @@ export default class Home extends PureComponent {
 
     return (
       <View style={styles.header}>
-        <Button title="Balance" onPress={() => this.setState({selectedMenu: 'balance'})} />
-        <Button title="Transactions" />
-        <Button title="Pay" />
-        <Button title="Buy / Sell" />
-        <Component />
+        <View style={styles.navigation}>
+          <Button title="Balance" onPress={() => this.setState({ selectedMenu: 'balance' })} />
+          <Button title="Transactions" />
+          <Button title="Pay" />
+        </View>
+        <View style={styles.content}>
+          <Component wallet={this.wallet} />
+        </View>
       </View>
     )
   }
@@ -34,7 +35,15 @@ export default class Home extends PureComponent {
 const styles = StyleSheet.create({
   header: {
     flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+  navigation: {
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  content: {
+
   }
 })

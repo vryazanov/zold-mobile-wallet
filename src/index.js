@@ -17,8 +17,8 @@ const persistConfig = {
   key: 'root',
   storage,
 }
-const _persistReducer = persistReducer(persistConfig, reducer)
-const store = createStore(_persistReducer, applyMiddleware(thunkMiddleware))
+const persistedReducer = persistReducer(persistConfig, reducer)
+const store = createStore(persistedReducer, applyMiddleware(thunkMiddleware))
 const persistor = persistStore(store)
 
 class App extends Component {
